@@ -5,32 +5,30 @@
 
 1. Installation
 ----------------
-You just need to copy everything into a directory in your webserver.
+Copy everything into a directory in your webserver.
 
 2. Usage
 ----------------
-Assume you have a PHP file where you have all the code in the variable $code
-and you know the language it's written in (in the variable $lang).
-Then, all you need to do is:
+First, make sure to reference the "syntaxsugar.css" style sheet in the
+<head> section of your page.
+
+Assuming $code contains the whole code snippet, and $lang the language
+it is written in, this is how you display the syntax highlighted code:
 
  > include("/path/to/syntaxsugar.php");
  >
  > $obj = new SyntaxSugar($code, $lang);
+ >
  > $obj->Show();
-
-This will just work, provided that you have referenced the "syntaxsugar.css"
-cascading style sheet in the <head> section of your page.
 
 At the moment the supported languages are C, C++, Java and HTML, but we're
 planning new extensions for other languages too.
 If you try to request a language that isn't supported, an exception is thrown.
-In the "SyntaxTest" subdirectory you can find an example of usage in C and Python.
+In the "SyntaxTest" subdirectory you can find an example of usage in all
+supported languages.
 
 3. Credits
 ----------------
-Authors: shainer and jmc
+Authors: shainer <syn.shainer@gmail.com> and jmc
 Homepage: http://giudoku.sourceforge.net
-
-Email any feedback, bugs or wishes at:
-	<syn.shainer@gmail.com>
 
